@@ -2,3 +2,13 @@
  - Himanshu Sabharwal
  - Aaditya Vardhan Vij
  - Raghav Sharma
+
+## Work Partition(WEB DEVELOPMENT)
+# Front End
+- HTML
+- Java Script
+- CSS
+- Tailwind
+# Back End
+-Node.js
+-MySQl
