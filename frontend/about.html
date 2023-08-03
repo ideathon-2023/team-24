@@ -5,18 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="campusPlatesInside.css"/>
 </head>
 
-<body>
-
+<body >
     <!-- -----------------------Navigation Bar start---------------------------- -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-white rounded mx-2 my-1" style="background: linear-gradient(to right, #f5c5d3, #f77c7c)">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="./logo-svg.svg" alt="Bootstrap" height="70px">
+                <i class="fa-solid fa-plate-wheat fa-2xl" style="color: #f54748;"></i>
             </a>
+            <h3 class="hding">Campus Plates</h3>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -25,24 +27,26 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="campusPlates.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="./about.html">About</a>
+                        <a class="nav-link" href="./img/about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./contact.html">Contact us</a>
+                        <a class="nav-link" href="./img/contact.html">Contact us</a>
                     </li>
                     <li class="nav-item dropdown mx-lg-3 my-2 my-lg-0">
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Continue to your Mess
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="btn dropdown-item" data-bs-toggle="modal" data-bs-target="#studentModal"
-                                    href="#" href="#">Continue as Student</a></li>
-                            <li><a class="btn dropdown-item" data-bs-toggle="modal" data-bs-target="#messModal" href="#"
-                                    href="#">Continue as Mess Manager</a></li>
+                            <img src="profile.svg" alt="mdo" width="30" height="30" class="rounded-circle">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -53,77 +57,84 @@
 
 
 
-    <!-- --------------------Student Login Modal start-------------------------- -->
-    <div class="modal fade" id="studentModal" tabindex="-1" aria-labelledby="studentModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Enter your College Email and Password</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="studentInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="studentInputEmail1"
-                                aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="studentInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="studentInputPassword1">
-                        </div>
-                        <div class="my-3">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                            <button type="button" class="btn btn-secondary mx-2" data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+    <div class="d-flex">
+
+        <!-- ---------------------------SideBar start------------------------------ -->
+        <div class="d-flex flex-column flex-shrink-0 rounded mx-2 my-2 side" >
+            <ul class="nav nav-pills red nav-flush flex-column mb-auto text-center">
+                <li class="nav-item">
+                    <a href="./menu_m.html" class="nav-link py-3" aria-current="page"
+                        data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Mess Menu"
+                        data-bs-original-title="Mess Menu">
+                        <img class="bi pe-none" width="30" height="30" role="img" aria-label="Mess Menu"
+                            src="menu.svg" alt="...">
+                    </a>
+                </li>
+                <li>
+                    <a href="./rebate_m.html" class="nav-link py-3" data-bs-toggle="tooltip" data-bs-placement="right"
+                        aria-label="View Rebates" data-bs-original-title="View Rebates">
+                        <img class="bi pe-none" width="37" height="37" role="img" aria-label="View Rebates"
+                            src="rebate.svg" alt="...">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./fees_m.html" class="nav-link active py-3 border-bottom rounded-4 .panel" data-bs-toggle="tooltip" data-bs-placement="right"
+                        aria-label="Fee Structure" data-bs-original-title="Fee Structure">
+                        <img class="bi pe-none" width="30" height="30" role="img" aria-label="Fee Structure" src="fee_1.svg"
+                            alt="...">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./feedback_m.html" class="nav-link py-3" data-bs-toggle="tooltip" data-bs-placement="right"
+                        aria-label="Feedback and Suggestions" data-bs-original-title="Feedback and Suggestions">
+
+                        <img class="bi pe-none" width="33" height="33" role="img" aria-label="Feedback and Suggestions"
+                            src="feedback.svg" alt="...">
+                    </a>
+                </li>
+                <li>
+                    <a href="./notification_m.html" class="nav-link py-3" data-bs-toggle="tooltip" data-bs-placement="right"
+                        aria-label="Notify Students" data-bs-original-title="Notify Students">
+
+                        <img class="bi pe-none" width="33" height="33" role="img" aria-label="Notify Students"
+                            src="notification.svg" alt="...">
+                    </a>
+                </li>
+            </ul>
         </div>
-    </div>
-    <!-- ------------------------Student Login Modal end---------------------------- -->
 
 
-    <!-- -----------------------Mess Login Modal start-------------------------- -->
-    <div class="modal fade" id="messModal" tabindex="-1" aria-labelledby="messModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Enter your username and password</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="messInputEmail1" class="form-label">Username</label>
-                            <input class="form-control" id="messInputUsername1" aria-describedby="emailHelp">
-                        </div>
-                        <div class="mb-3">
-                            <label for="messInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="messInputPassword1">
-                        </div>
-                        <div class="my-3">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                            <button type="button" class="btn btn-secondary mx-2" data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </form>
-                </div>
-                <!-- <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div> -->
-            </div>
+        <!-- -------------------------SideBar end---------------------------- -->
+
+
+        <!-------------------------- Main Content ----------------------------->
+        <div class="flex-grow-1 mx-5 my-2">
+            
         </div>
+
+
+
     </div>
-    <!-- -------------------------Mess Login Modal end---------------------------- -->
 
 
 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        });
+    </script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>
