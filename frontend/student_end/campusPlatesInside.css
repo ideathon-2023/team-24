@@ -1,0 +1,15 @@
+body{
+    background-color: #f7c4b7;
+}
+.hding{
+    color:#fd3939;
+    text-shadow: #0e0416;
+}
+.side{
+    background-color: #f7cec8;
+    width: 4rem;
+}
+.panel a:active
+{
+    color: orange !important;
+}
