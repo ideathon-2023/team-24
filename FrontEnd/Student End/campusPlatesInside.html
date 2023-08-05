@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="campusPlatesInside.css"/>
+    <link rel="stylesheet" href="campusPlates.css" />
+</head>
+
+<body >
+    <!-- -----------------------Navigation Bar start---------------------------- -->
+    <nav class="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-white rounded mx-2 my-1" style="background: linear-gradient(to right, #f5c5d3, #f77c7c)">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-plate-wheat fa-2xl home" style="color: #f54748;"></i>
+            </a>
+            <h3 class="hding">Campus Plates</h3>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/HomePage/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link about" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link contact" href="#">Contact us</a>
+                    </li>
+                    <li class="nav-item dropdown mx-lg-3 my-2 my-lg-0">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="profile.svg" alt="mdo" width="30" height="30" class="rounded-circle">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Name - </a></li>
+                            <li><a class="dropdown-item" href="#">SID - </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">LOGOUT</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- -----------------------Navigation Bar end---------------------------- -->
+
+
+
+    <div class="d-flex">
+
+        <!-- ---------------------------SideBar start------------------------------ -->
+        <div class="d-flex flex-column flex-shrink-0 rounded mx-2 my-2 side topimg" >
+            <ul class="nav nav-pills red  flex-column mb-auto text-center">
+                <li class="nav-item">
+                    <a href="#menu" class="nav-link py-3 colBlock" aria-current="page"
+                        data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Mess Menu"
+                        data-bs-original-title="Mess Menu">
+                        <img class="bi pe-none" width="30" height="30" role="img" aria-label="Mess Menu"
+                            src="menu_1.svg" alt="...">
+                    </a>
+                </li>
+                <li>
+                    <a href="#rebate" class="nav-link py-3 colBlock" data-bs-toggle="tooltip" data-bs-placement="right"
+                        aria-label="View Rebate Form" data-bs-original-title="View Rebate Form">
+                        <img class="bi pe-none" width="37" height="37" role="img" aria-label="View Rebate Form"
+                            src="rebate_1.svg" alt="...">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#fees" class="nav-link py-3 colBlock" data-bs-toggle="tooltip" data-bs-placement="right"
+                        aria-label="Fee Structure" data-bs-original-title="Fee Structure">
+                        <img class="bi pe-none" width="30" height="30" role="img" aria-label="Fee Structure" src="fee_1.svg"
+                            alt="...">
+                    </a>
+                </li>
+                <li >
+                  <a class="nav-link py-3 colBlock notification" data-bs-toggle="tooltip" data-bs-placement="right"
+                  aria-label="Notifications" data-bs-original-title="Notifications">
+                  
+                  <img class="bi pe-none" width="33" height="33" role="img" aria-label="Notifications"
+                  src="notification_1.svg" alt="...">
+                </a>
+              </li>
+            </ul>
+        </div>
+        
+        
+        <!-- -------------------------SideBar end---------------------------- -->
+        
+        
+        <!-------------------------- Main Content ----------------------------->
+        <div class="flex-grow-1 mx-5 my-2 sidemenu">
+          
+          <h2 class="food-menu-heading fdhead " id="menu">Food Menu</h2>
+            <ul>
+              <li><a href="#breakfast">Breakfast</a></li>
+              <li><a href="#lunch">Lunch</a></li>
+              <li><a href="#snacks">Evening Snacks</a></li>
+              <li><a href="#dinner">Dinner</a></li>
+            </ul>
+            <h2 class="food-menu-heading fdhead rebatehead" >Rebate Form</h2>
+          </div>
+          <section id="food-menu">
+            <div class="food-menu-container container flex-grow-0.5 sidefull">
+              <div class="food-menu-item">
+                <div class="food-img topsideimg">
+                  <img src="https://source.unsplash.com/random/400x400/?foodmenu" alt="" class="rounded py-10" />
+                </div>
+              </div>
+              <div class="food-menu-item">
+                <div class="food-description" id="breakfast">
+                  <h2 class="food-titile">Breakfast</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+                    quae.
+                  </p>
+                  <p class="food-price">Price: &#8377; 250</p>
+                </div>
+                <div class="food-img">
+                  <img
+                  src="https://source.unsplash.com/random/400x400/?breakfast"
+                  alt="error" class="rounded-circle"
+                  />
+                </div>
+                <div class="food-description" id="lunch">
+                  <h2 class="food-titile">Lunch</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+                    quae.
+                  </p>
+                  <p class="food-price">Price: &#8377; 250</p>
+                </div>
+              </div>
+              <div class="food-menu-item">
+                <div class="food-img">
+                  <img src="https://source.unsplash.com/random/400x400/?Lunch" alt="" class="rounded-circle"/>
+                </div>
+                <div class="food-description" id="snacks">
+                  <h2 class="food-titile">Evening Snacks</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+                    quae.
+                  </p>
+                  <p class="food-price">Price: &#8377; 250</p>
+                </div>
+              </div>
+              <div class="food-menu-item">
+                <div class="food-img">
+                  <img src="https://source.unsplash.com/random/400x400/?Snacks" alt="" class="rounded-circle"/>
+                </div>
+                <div class="food-description" id="dinner">
+                  <h2 class="food-titile">Dinner</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+                    quae.
+                  </p>
+                  <p class="food-price">Price: &#8377; 250</p>
+                </div>
+              </div>
+              <div class="food-menu-item">
+                <div class="food-img">
+                  <img src="https://source.unsplash.com/random/400x400/?Cooked" alt="" class="rounded-circle"/>
+                </div>
+              </div>
+              <hr class="rebate">
+              <section id="rebate">
+                <form>
+                  <div class="form-group row rebate">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Reason for Rebate</label>
+                    <div class="col-sm-10">
+                      <textarea class="form-control text-danger" placeholder="Reason"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row passwo">
+                  <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control text-danger" id="inputPassword3" placeholder="Password">
+                    </div>
+                  </div>
+                  <fieldset class="form-group">
+                    <div class="row">
+                      <legend class="col-form-label col-sm-2 pt-0">Meals</legend>
+                      <div class="col-sm-10 text-danger">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios1" value="option1" checked>
+                          <label class="form-check-label text-danger" for="gridRadios1">
+                            Breakfast
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios2" value="option2">
+                          <label class="form-check-label" for="gridRadios2">
+                            Lunch
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios2" value="option2">
+                          <label class="form-check-label" for="gridRadios2">
+                            Evening Snacks
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios2" value="option2">
+                          <label class="form-check-label" for="gridRadios2">
+                            Dinner
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="form-group row">
+                    <div class="col-sm-2">Refund</div>
+                    <div class="col-sm-10 text-danger">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">
+                          Do you want refund.
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-10">
+                      <button type="submit" class="btn btn-danger">Submit</button>
+                    </div>
+                  </div>
+                </form>
+                
+              </div>
+            </section>
+            <hr>
+            <section class ="counter" id="fees">
+              <h2 class="food-menu-heading fdhead mx-5 my-2 sidemenu">Fees Details</h2>
+              <div class="counter">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                      <div class="employees">
+                        <p class="counter-count cntr">1000</p>
+                        <p class="employee-p text-danger">Breakfast Fees</p>
+                      </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                      <div class="customer">
+                        <p class="counter-count cntr">1000</p>
+                        <p class="customer-p text-danger">Lunch Fees</p>
+                              </div>
+                          </div>
+              
+                          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                              <div class="design">
+                                  <p class="counter-count cntr">1000</p>
+                                  <p class="design-p text-danger">Evening Snacks Fees</p>
+                              </div>
+                          </div>
+              
+                          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                              <div class="order">
+                                  <p class="counter-count cntr">1000</p>
+                                  <p class="order-p text-danger">Dinner Fees</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              </section>
+              
+            </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="campusPlatesInside.js"></script>
+</body>
+</html>
