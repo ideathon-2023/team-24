@@ -9,6 +9,4 @@
 - Java Script
 - CSS
 - Tailwind
-# Back End
--Node.js
--MySQl
+- Bootstrap
