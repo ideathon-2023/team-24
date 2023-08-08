@@ -9,8 +9,7 @@ import {
 } from 'firebase/firestore'
 import {
     getAuth,
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword, signOut
+    createUserWithEmailAndPassword
 } from 'firebase/auth'
 
 
@@ -81,43 +80,3 @@ signupForm.addEventListener('submit', (e) => {
 })
 
 
-// logout
-// const logoutButton = document.querySelector('.logout')
-// logoutButton.addEventListener('click', () => {
-//     signOut(auth)
-//         .then(() => {
-//             window.location.href = '/FrontEnd/StudentEnd/index.html';
-//         })
-// })
-
-const logoutLink = document.getElementsByClassName('logoutLink')[0];
-    logoutLink.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        // Perform user logout using Firebase
-        signOut(auth)
-            .then(() => {
-                // Redirect to the desired page after successful logout
-                window.location.href = '/FrontEnd/HomePage/index.html';
-            })
-            .catch((error) => {
-                console.log('Logout error:', error.message);
-            });
-    });
-
-//login
-const loginForm = document.querySelector('.login')
-loginForm.addEventListener('submit', (e) => {
-    e.preventDefault()
-
-    const email = loginForm.email.value
-    const password = loginForm.password.value
-
-    signInWithEmailAndPassword(auth, email, password)
-        .then((cred) => {
-            window.location.href = '/FrontEnd/StudentEnd/campusPlatesInside.html';
-        })
-        .catch((err) => {
-            console.log(err.message)
-        })
-})
