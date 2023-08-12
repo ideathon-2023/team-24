@@ -14,101 +14,35 @@
 </head>
 <body class="bg-[#fff6f6]" class="overflow-y-auto">
   
-    <nav
-  class="relative flex w-full flex-wrap items-center justify-between py-2 text-red-500 shadow-lg hover:text-red-700 focus:text-red-700 lg:py-4 bg-red-200"
-  data-te-navbar-ref>
-  <div class="flex w-full flex-wrap items-center justify-between px-3">
-    <div>
-      <a
-        class="mx-2 my-1 flex items-center text-red-900 hover:text-red-900 focus:text-red-900 lg:mb-0 lg:mt-0"
-        href="#">
-        <i class="fa-solid fa-plate-wheat fa-2xl" style="color: #f54748;"></i>
-      </a>
-    </div>
-
-    <!-- Hamburger button for mobile view -->
-    <button
-      class="block border-0 bg-transparent px-2 text-red-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-red-200 lg:hidden"
-      type="button"
-      data-te-collapse-init
-      data-te-target="#navbarSupportedContent4"
-      aria-controls="navbarSupportedContent4"
-      aria-expanded="false"
-      aria-label="Toggle navigation">
-      <!-- Hamburger icon -->
-      <span class="[&>svg]:w-7">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          class="h-7 w-7">
-          <path
-            fill-rule="evenodd"
-            d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-            clip-rule="evenodd" />
-        </svg>
-      </span>
-    </button>
-
-    <!-- Collapsible navbar container -->
-    <div
-      class="!visible mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto"
-      id="navbarSupportedContent4"
-      data-te-collapse-item>
-      <!-- Left links -->
-      <ul
-        class="list-style-none mr-auto flex flex-col pl-0 lg:mt-1 lg:flex-row"
-        data-te-navbar-nav-ref>
-        <!-- Home link -->
-        <li
-          class="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
-          data-te-nav-item-ref>
-          <a
-            class="text-red-500 hover:text-red-700 focus:text-red-700 disabled:text-black/30 text-red-200 hover:text-red-400 focus:text-red-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-red-400"
-            aria-current="page"
-            href="#"
-            data-te-nav-link-ref
-            ><b>Campus Plates</b></a
-          >
-        </li>
-      </ul>
-
-      <div class="flex items-center">
-        <button
-          type="button"
-          data-te-ripple-init
-          data-te-ripple-color="light"
-          class="mr-3 inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-red transition duration-150 ease-in-out hover:bg-red-300 hover:text-red-600 focus:text-red-600 focus:outline-none focus:ring-0 active:text-red-700 motion-reduce:transition-none">
-          <a href="#signin">Login</a>
-        </button>
-        <button
-          type="button"
-          data-te-ripple-init
-          data-te-ripple-color="light"
-          class="mr-3 inline-block rounded bg-red px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-red-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-red-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-red-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] signup">
-          Sign up for free
-        </button>
-        <button
-          type="button"
-          data-te-ripple-init
-          data-te-ripple-color="light"
-          class="mr-3 inline-block rounded px-3 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg motion-reduce:transition-none"
-          style="background-color: #333">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-4 w-4"
-            fill="currentColor"
-            viewBox="0 0 24 24">
-            <path
-              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-          </svg>
-        </button>
+    <!-- Main navigation container -->
+    <nav class="bg-red-300 border-red-200 dark:bg-red-300 rounded">
+      <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+          <a href="https://flowbite.com" class="flex items-center">
+            <i class="fa-solid fa-plate-wheat fa-2xl" style="color: #f54748;"></i>
+              <span class="self-center text-2xl font-semibold red-600 space-nowrap dark:text-red-600 px-3">Campus Plates</span>
+          </a>
+          <div class="flex items-center">
+              <a href="#login" class="mr-6 text-lg  text-white dark:text-white hover:bg-red-500 rounded px-2 py-2">Login</a>
+              <a href="#" class="text-lg  text-white dark:text-white hover:bg-red-500 rounded px-2 py-2 signup">Sign Up</a>
+          </div>
       </div>
-    </div>
-  </div>
-</nav>
+  </nav>
+  <nav class="bg-red-200 dark:bg-red-200">
+      <div class="max-w-screen-xl px-4 py-3 mx-auto">
+          <div class="flex items-center">
+              <ul class="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
+                  <li>
+                      <a href="#" class="text-red-500 dark:text-red-500 hover:text-base hover:text-red-600 home" aria-current="page">Home</a>
+                  </li>
+                  <li>
+                      <a href="#more" class="text-red-500 dark:text-red-500 hover:text-base hover:text-red-600">More</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
 <hr class="h-px my-8 bg-red-100 border-0 dark:bg-red-100 mx-8">
-<section class="h-screen">
+<section class="h-screen" id="login">
   <div class="h-full">
     <!-- Left column container with background-->
     <div
@@ -217,7 +151,7 @@
 
           <div class="mb-6 flex items-center justify-between">
             <!-- Remember me checkbox -->
-            <!-- <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
+            <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
               <input
                 class="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-red-500 checked:bg-red-400 checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-red-500 dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-red-300"
                 type="checkbox"
@@ -228,39 +162,37 @@
                 for="exampleCheck2">
                 Remember me
               </label>
-            </div> -->
-
-            <!--Forgot password link-->
-            <a href="#!">Forgot password?</a>
-          </div>
 
           <!-- Login button -->
           <div class="text-center lg:text-left">
             <button
-              type="submit"
-              class="inline-block rounded bg-[#f9aeae] px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-[#ff9999] hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-[#fd7777] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+              type="button"
+              class="inline-block rounded bg-[#f9aeae] px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-[#ff9999] hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-[#fd7777] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] my-14 login"
               data-te-ripple-init
               data-te-ripple-color="light">
               Login
             </button>
-
+            <!--Forgot password link-->
+        <a href="#!" class="mx-5">Forgot password?</a>
             <!-- Register link -->
             <p class="mb-0 mt-2 pt-1 text-red-600 font-semibold">
               Don't have an account?
               <a
-                href="../HomePageconnectedParts/CampusPlatesLogin.html"
+                href="#"
                 class="text-[#ff2400] transition duration-150 ease-in-out hover:text-danger-600 focus:text-danger-600 active:text-danger-700 signup"
                 >Register</a
               >
             </p>
           </div>
+        </div>
+      </div>
         </form>
       </div>
     </div>
   </div>
 </section>
       <hr class="w-640 h-px bg-red-100 border-0 dark:bg-red-100 mx-8">
-      <section class="text-gray-600 body-font">
+      <section class="text-gray-600 body-font" id="more">
         <div class="container px-5 my-12 mx-auto">
           <div class="flex flex-wrap w-full mb-20">
             <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
@@ -427,6 +359,5 @@
       </footer>
       <script src="campusPlates.js"></script>
       <script src="../bundle3.js"></script>
-      
 </body>
 </html>
