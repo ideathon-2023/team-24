@@ -1,12 +1,12 @@
 body{
-    background-color: #f7c4b7;
+    background-color: #f7d1c7;
 }
 .hding{
     color:#fd3939;
     text-shadow: #0e0416;
 }
 .side{
-    background-color: #f7cec8;
+    background-color: #f9d6d1;
     width: 4rem;
 }
 .panel a:active
@@ -39,7 +39,7 @@ ul {
 }
 .sidemenu{
   position: static;
-  padding-left: 50px;
+  padding-left: 100px;
 }
 .sidefull{
   position: static;
@@ -50,12 +50,9 @@ ul {
   padding-bottom: 70px;
 }
 .rebate{
-  position: static;
+  position: relative;
   padding-top: 50px;
-}
-.rebatehead{
-  position: static;
-  padding-top: 2460px;
+
 }
 hr{
   margin-top: 100px;
@@ -103,4 +100,81 @@ hr{
 }
 .feeshead{
   margin-top: 2000px;
+}
+.rbpl{
+  padding-bottom: 30px;
+}
+.hdcont{
+  font-size: 20px;
+  color:#590f2d;
+}
+
+.circular-grid {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #f36a7f;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px auto;
+}
+
+/* Custom CSS for large grid */
+.large-grid {
+  background-color: #fc9696c4;
+  color: #fff;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.cntr{
+  font-size: 20px;
+}
+.incntr{
+  font-size: 20px;
+}
+.counter-count{
+  margin-right: 30px;
+  margin-left: 10px;
+  font-size: 30px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+} 
+.order-p{
+  font-size: 40px;
+}
+.blck{
+  margin-bottom: 60px;
+}
+.circl{
+  margin-left: 100px;
+}
+.circular-grid:hover{
+  background-color: #f94a64;
+}
+@media (max-width: 767px) {
+  .d-flex.justify-center {
+    justify-content: flex-end !important;
+  }
+}
+.nav-item{
+  font-size: 20px;
+}
+.contMenu{
+  font-size: 20px;
+}
+.rhead{
+  align-items: left;
 }
