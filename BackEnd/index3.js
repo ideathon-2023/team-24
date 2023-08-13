@@ -33,6 +33,7 @@ const auth = getAuth()
 
 
 //login
+console.log('hello duniya');
 const loginForm = document.querySelector('.login')
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault()
