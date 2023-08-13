@@ -1,19 +1,19 @@
 let ele = document.getElementsByClassName("signup")[0];
 let ele2 = document.getElementsByClassName("signup")[1];
-let ele3 = document.getElementsByClassName("home")[0];
-let ele4 = document.getElementsByClassName("login")[0];
+// let ele3 = document.getElementsByClassName("home")[0];
+// let ele4 = document.getElementsByClassName("login")[0];
 ele.addEventListener("click",function(){
     window.location.href = "/HomePageconnectedParts/CampusPlatesLogin.html";
 })
 ele2.addEventListener("click",function(){
     window.location.href = "/HomePageconnectedParts/CampusPlatesLogin.html";
 })
-ele4.addEventListener("click",function(){
-  window.location.href = "/StudentEnd/campusPlatesInside.html";
-}) 
-ele3.addEventListener("click",function(){
-  alert("You Need to Login");
-}) 
+// ele4.addEventListener("click",function(){
+//   window.location.href = "/StudentEnd/campusPlatesInside.html";
+// }) 
+// ele3.addEventListener("click",function(){
+//   alert("You Need to Login");
+// }) 
 function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
     console.log('statusChangeCallback');
     console.log(response);                   // The current login status of the person.
