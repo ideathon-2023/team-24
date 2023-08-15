@@ -5,7 +5,7 @@
 
 ## Work Partition(WEB DEVELOPMENT)
 # Front End
-- HTML
+- HTML ![img]([https://myoctocat.com/assets/images/base-octocat.svg](https://cdn-icons-png.flaticon.com/512/262/262200.png))
 - Java Script
 - CSS
 - Tailwind
