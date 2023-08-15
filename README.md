@@ -5,7 +5,7 @@
 
 ## Work Partition(WEB DEVELOPMENT)
 # Front End
-- HTML ![img](https://cdn-icons-png.flaticon.com/512/262/262200.png)
+- HTML 
 - Java Script
 - CSS
 - Tailwind
