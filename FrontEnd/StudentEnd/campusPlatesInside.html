@@ -9,7 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="campusPlatesInside.css"/>
-    <link rel="stylesheet" href="campusPlates.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@100&family=Satisfy&family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
 </head>
 
 <body >
@@ -73,8 +75,8 @@
                 </li>
                 <li>
                     <a href="#rebate" class="nav-link py-3 colBlock" data-bs-toggle="tooltip" data-bs-placement="right"
-                        aria-label="View Rebate Form" data-bs-original-title="View Rebate Form">
-                        <img class="bi pe-none" width="37" height="37" role="img" aria-label="View Rebate Form"
+                        aria-label="View Meal Selection Form" data-bs-original-title="View Meal Selection Form">
+                        <img class="bi pe-none" width="37" height="37" role="img" aria-label="View Meal Selection Form"
                             src="rebate_1.svg" alt="...">
                     </a>
                 </li>
@@ -117,12 +119,12 @@
             <div class="food-menu-container container flex-grow-0.5 sidefull">
               <div class="food-menu-item">
                 <div class="food-img topsideimg">
-                  <img src="https://source.unsplash.com/random/400x400/?foodmenu" alt="" class="rounded py-10" />
+                  <img src="https://source.unsplash.com/random/300x300/?foodmenu" alt="" class="rounded py-10" />
                 </div>
               </div>
               <div class="food-menu-item">
-                <div class="food-description" id="breakfast">
-                  <h3 class="food-titile">Breakfast</h3>
+                <div class="food-description hidden" id="breakfast">
+                  <h2 class="food-titile">Breakfast</h2>
                   <table class="table-auto">
                     <thead>
                       <tr>
@@ -163,16 +165,16 @@
                   </table>
                   <p class="food-price">Price: &#8377; 250</p>
                   <p class="food-price" id="time_b"></p>
-                  <p class="food-price" id="time_b_h"></p>
+                  <p class="food-pricel" id="time_b_h"></p>
+                  <div class="food-img">
+                    <img
+                    src="https://source.unsplash.com/random/300x300/?breakfast"
+                    alt="error" class="rounded-circle"
+                    />
+                  </div>
                 </div>
-                <div class="food-img">
-                  <img
-                  src="https://source.unsplash.com/random/400x400/?breakfast"
-                  alt="error" class="rounded-circle"
-                  />
-                </div>
-                <div class="food-description" id="lunch">
-                  <h3 class="food-titile">Lunch</h3>
+                <div class="food-description hidden" id="lunch">
+                  <h2 class="food-titile">Lunch</h2>
                   <table class="table-auto">
                     <thead>
                       <tr>
@@ -213,15 +215,15 @@
                   </table>
                   <p class="food-price">Price: &#8377; 250</p>
                   <p class="food-price" id="time_l"></p>
-                  <p class="food-price" id="time_l_h"></p>
+                  <p class="food-pricel" id="time_l_h"></p>
+                  <div class="food-img">
+                    <img src="https://source.unsplash.com/random/300x300/?Lunch" alt="" class="rounded-circle"/>
+                  </div>
                 </div>
               </div>
               <div class="food-menu-item">
-                <div class="food-img">
-                  <img src="https://source.unsplash.com/random/400x400/?Lunch" alt="" class="rounded-circle"/>
-                </div>
-                <div class="food-description" id="snacks">
-                  <h3 class="food-titile">Evening Snacks</h3>
+                <div class="food-description hidden" id="snacks">
+                  <h2 class="food-titile">Evening Snacks</h2>
                   <table class="table-auto">
                     <thead>
                       <tr>
@@ -269,15 +271,15 @@
                   </table>
                   <p class="food-price">Price: &#8377; 250</p>
                   <p class="food-price" id="time_ev"></p>
-                  <p class="food-price" id="time_ev_h"></p>
+                  <p class="food-pricel" id="time_ev_h"></p>
+                  <div class="food-img">
+                    <img src="https://source.unsplash.com/random/300x300/?Snacks" alt="" class="rounded-circle"/>
+                  </div>
                 </div>
               </div>
               <div class="food-menu-item">
-                <div class="food-img">
-                  <img src="https://source.unsplash.com/random/400x400/?Snacks" alt="" class="rounded-circle"/>
-                </div>
-                <div class="food-description" id="dinner">
-                  <h3 class="food-titile">Dinner</h3>
+                <div class="food-description hidden" id="dinner">
+                  <h2 class="food-titile">Dinner</h2>
                   <table class="table-auto">
                     <thead>
                       <tr>
@@ -318,21 +320,21 @@
                   </table>
                   <p class="food-price">Price: &#8377; 250</p>
                   <p class="food-price" id="time_d"></p>
-                  <p class="food-price" id="time_d_h"></p>
-                </div>
-              </div>
-              <div class="food-menu-item">
-                <div class="food-img">
-                  <img src="https://source.unsplash.com/random/400x400/?Cooked" alt="" class="rounded-circle"/>
+                  <p class="food-pricel" id="time_d_h"></p>
+                  <div class="food-menu-item">
+                    <div class="food-img">
+                      <img src="https://source.unsplash.com/random/300x300/?Cooked" alt="" class="rounded-circle"/>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
               <hr class="rebate">
-              <section id="rebate">
-                <h1 class="food-menu-heading fdhead">Rebate Form</h1>
+              <section id="rebate" class="hidden">
+                <h1 class="food-menu-heading fdhead">Meal Selection Form</h1>
                 <form>
                   <div class="rebate">
-                    <label for="inputEmail3" class="hdcont">Reason for Rebate</label>
+                    <label for="inputEmail3" class="hdcont">Reason</label>
                     <div class="col-sm-10 rbpl">
                       <textarea class="form-control text-danger" placeholder="Reason"></textarea>
                     </div>
@@ -389,9 +391,9 @@
               </div>
             </section>
             <hr>
-            <section class ="counter" id="fees">
+            <section class ="counter hidden" id="fees">
               <h1 class="food-menu-heading fdhead my-3 sidemenu">Fees Details</h1>
-            </section>
+            
             
             <div class="container ">
               <div class="row justify-content-end">
@@ -429,10 +431,11 @@
               </div>
             </div>
             </div>
+          </section>
     <script src="../bundle2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
-    <script src="campusPlatesInside.js"></script>
+    <script defer src="campusPlatesInside.js"></script>
 </body>
 </html>
