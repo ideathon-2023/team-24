@@ -1,3 +1,18 @@
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        console.log(entry);
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+        else{
+            entry.target.classList.remove('show');
+        }
+    })
+})
+let hiddenEle = document.querySelectorAll(".hidden");
+hiddenEle.forEach((el)=>{
+    observer.observe(el);
+})
 let ele = document.getElementsByClassName("colBlock");
 let rem = document.getElementsByClassName("colBlock");
 let dbox1 = document.getElementsByClassName("circl1")[0];
