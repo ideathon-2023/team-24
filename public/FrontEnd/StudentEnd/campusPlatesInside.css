@@ -1,0 +1,220 @@
+body{
+    background-color: #f7d1c7;
+}
+.hding{
+    color:#fd3939;
+    text-shadow: #0e0416;
+}
+.side{
+    background-color: #f9d6d1;
+    width: 4rem;
+}
+.panel a:active
+{
+
+    color: orange !important;
+}
+ul {
+    list-style-type: none;
+  }
+  
+  li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color on hover */
+  li a:hover {
+    background-color: #f97b7b;
+    color: white;
+  }
+.fdhead{
+  color:#fa4949;
+  text-shadow: 1px 1px  #590f2d;
+}
+.topimg{
+  position: fixed;
+}
+.sidemenu{
+  position: static;
+  padding-left: 100px;
+}
+.sidefull{
+  position: static;
+  padding-right: 50px;
+}
+.topsideimg{
+  position:static;
+  padding-bottom: 70px;
+}
+.rebate{
+  position: relative;
+  padding-top: 50px;
+
+}
+hr{
+  margin-top: 100px;
+  margin-left: 100px;
+  color:#f66f4d;
+}
+.passwo{
+  position: static;
+  padding-bottom: 15px;
+}
+.counter
+{
+    text-align: center;
+}
+.employees,.customer,.design,.order
+{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+.counter-count
+{
+    font-size: 18px;
+    background-color: #f67171;
+    border-radius: 50%;
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+    line-height: 92px;
+    width: 92px;
+    height: 92px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: inline-block;
+}
+.counter-count:hover{
+  background-color: #f85757;
+}
+.employee-p,.customer-p,.order-p,.design-p
+{
+    font-size: 24px;
+    color: #000000;
+    line-height: 34px;
+}
+.feeshead{
+  margin-top: 2000px;
+}
+.rbpl{
+  padding-bottom: 30px;
+}
+.hdcont{
+  font-size: 20px;
+  color:#590f2d;
+}
+
+.circular-grid {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #f36a7f;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px auto;
+}
+
+/* Custom CSS for large grid */
+.large-grid {
+  background-color: #fc9696c4;
+  color: #fff;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.cntr{
+  font-size: 20px;
+}
+.incntr{
+  font-size: 20px;
+}
+.counter-count{
+  margin-right: 30px;
+  margin-left: 10px;
+  font-size: 30px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+} 
+.order-p{
+  font-size: 40px;
+}
+.blck{
+  margin-bottom: 60px;
+}
+.circl{
+  margin-left: 100px;
+}
+.circular-grid:hover{
+  background-color: #f94a64;
+}
+@media (max-width: 767px) {
+  .d-flex.justify-center {
+    justify-content: flex-end !important;
+  }
+}
+.nav-item{
+  font-size: 20px;
+}
+.contMenu{
+  font-size: 20px;
+}
+.rhead{
+  align-items: left;
+}
+td{
+  padding-right: 80px;
+  padding-bottom: 20px;
+  font-size:20px;
+  font-family: 'Pacifico', cursive;
+}
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+th{
+  font-size: 25px;
+
+font-family: 'Ubuntu', sans-serif;
+}
+h2{
+  font-family: cursive;
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+.hidden{
+  opacity: .1;
+  filter: blur(4px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+.show{
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0);
+}
+@media(prefers-reduced-motion){
+  .hidden{
+    transition:none
+  }
+}
+.food-price, .food-pricel{
+  font-size: 20px;
+  font-family: 'Pacifico', cursive;
+}
+.food-img, .food-pricel{
+  padding-bottom: 40px;
+}

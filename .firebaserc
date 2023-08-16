@@ -1,0 +1,11 @@
+{
+  "projects": {
+    "default": "campusplates"
+  },
+  "rewrites": [
+    {
+      "source": "**",
+      "destination": "/FrontEnd/StudentEnd/index.html"
+    }
+  ]
+}
