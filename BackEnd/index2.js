@@ -5,13 +5,15 @@ import {
     onSnapshot,
     query, where,
     orderBy, serverTimestamp,
-    getDoc, setDoc
+    getDoc, setDoc, updateDoc, increment, Timestamp
 } from 'firebase/firestore'
 import {
     getAuth,
     signOut,
     onAuthStateChanged
 } from 'firebase/auth'
+
+
 
 
 const firebaseConfig = {
@@ -62,6 +64,13 @@ const user = auth.currentUser;
 //   // No user is signed in.
 //   console.log("No user signed in")
 // }
+// const docRef = await addDoc(collection(db, 'mail'), {
+//     to: ['someone@example.com'],
+//     message: {
+//         subject: 'Hello from Firebase!',
+//         html: 'This is an <code>HTML</code> email body.'
+//     }
+// });
 
 console.log("heyyyyyyy")
 
@@ -77,15 +86,15 @@ const mess_timings = doc(db, 'messTiming', 'timings');
 getDoc(menu_monday).then((snapshot) => {
     if (snapshot.exists()) {
         const menuMonday = snapshot.data();
-        
+
         const mon_b = document.getElementById('mon_b');
-            mon_b.textContent = menuMonday.breakfast;
+        mon_b.textContent = menuMonday.breakfast;
         const mon_l = document.getElementById('mon_l');
-            mon_l.textContent = menuMonday.lunch;
+        mon_l.textContent = menuMonday.lunch;
         const mon_ev = document.getElementById('mon_ev');
-            mon_ev.textContent = menuMonday.eveningsnacks;
+        mon_ev.textContent = menuMonday.eveningsnacks;
         const mon_d = document.getElementById('mon_d');
-            mon_d.textContent = menuMonday.dinner;
+        mon_d.textContent = menuMonday.dinner;
     } else {
         console.log("User document not found");
     }
@@ -99,13 +108,13 @@ getDoc(menu_tuesday).then((snapshot) => {
         const menuTuesday = snapshot.data();
 
         const tue_b = document.getElementById('tue_b');
-            tue_b.textContent = menuTuesday.breakfast;
+        tue_b.textContent = menuTuesday.breakfast;
         const tue_l = document.getElementById('tue_l');
-            tue_l.textContent = menuTuesday.lunch;
+        tue_l.textContent = menuTuesday.lunch;
         const tue_ev = document.getElementById('tue_ev');
-            tue_ev.textContent = menuTuesday.eveningsnacks;
+        tue_ev.textContent = menuTuesday.eveningsnacks;
         const tue_d = document.getElementById('tue_d');
-            tue_d.textContent = menuTuesday.dinner;
+        tue_d.textContent = menuTuesday.dinner;
     } else {
         console.log("User document not found");
     }
@@ -119,13 +128,13 @@ getDoc(menu_wednesday).then((snapshot) => {
         const menuWednesday = snapshot.data();
 
         const wed_b = document.getElementById('wed_b');
-            wed_b.textContent = menuWednesday.breakfast;
+        wed_b.textContent = menuWednesday.breakfast;
         const wed_l = document.getElementById('wed_l');
-            wed_l.textContent = menuWednesday.lunch;
+        wed_l.textContent = menuWednesday.lunch;
         const wed_ev = document.getElementById('wed_ev');
-            wed_ev.textContent = menuWednesday.eveningsnacks;
+        wed_ev.textContent = menuWednesday.eveningsnacks;
         const wed_d = document.getElementById('wed_d');
-            wed_d.textContent = menuWednesday.dinner;
+        wed_d.textContent = menuWednesday.dinner;
     } else {
         console.log("User document not found");
     }
@@ -139,13 +148,13 @@ getDoc(menu_thursday).then((snapshot) => {
         const menuThursday = snapshot.data();
 
         const thu_b = document.getElementById('thu_b');
-            thu_b.textContent = menuThursday.breakfast;
+        thu_b.textContent = menuThursday.breakfast;
         const thu_l = document.getElementById('thu_l');
-            thu_l.textContent = menuThursday.lunch;
+        thu_l.textContent = menuThursday.lunch;
         const thu_ev = document.getElementById('thu_ev');
-            thu_ev.textContent = menuThursday.eveningsnacks;
+        thu_ev.textContent = menuThursday.eveningsnacks;
         const thu_d = document.getElementById('thu_d');
-            thu_d.textContent = menuThursday.dinner;
+        thu_d.textContent = menuThursday.dinner;
     } else {
         console.log("User document not found");
     }
@@ -159,13 +168,13 @@ getDoc(menu_friday).then((snapshot) => {
         const menuFriday = snapshot.data();
 
         const fri_b = document.getElementById('fri_b');
-            fri_b.textContent = menuFriday.breakfast;
+        fri_b.textContent = menuFriday.breakfast;
         const fri_l = document.getElementById('fri_l');
-            fri_l.textContent = menuFriday.lunch;
+        fri_l.textContent = menuFriday.lunch;
         const fri_ev = document.getElementById('fri_ev');
-            fri_ev.textContent = menuFriday.eveningsnacks;
+        fri_ev.textContent = menuFriday.eveningsnacks;
         const fri_d = document.getElementById('fri_d');
-            fri_d.textContent = menuFriday.dinner;
+        fri_d.textContent = menuFriday.dinner;
     } else {
         console.log("User document not found");
     }
@@ -179,13 +188,13 @@ getDoc(menu_saturday).then((snapshot) => {
         const menuSaturday = snapshot.data();
 
         const sat_b = document.getElementById('sat_b');
-            sat_b.textContent = menuSaturday.breakfast;
+        sat_b.textContent = menuSaturday.breakfast;
         const sat_l = document.getElementById('sat_l');
-            sat_l.textContent = menuSaturday.lunch;
+        sat_l.textContent = menuSaturday.lunch;
         const sat_ev = document.getElementById('sat_ev');
-            sat_ev.textContent = menuSaturday.eveningsnacks;
+        sat_ev.textContent = menuSaturday.eveningsnacks;
         const sat_d = document.getElementById('sat_d');
-            sat_d.textContent = menuSaturday.dinner;
+        sat_d.textContent = menuSaturday.dinner;
     } else {
         console.log("User document not found");
     }
@@ -199,13 +208,13 @@ getDoc(menu_sunday).then((snapshot) => {
         const menuSunday = snapshot.data();
 
         const sun_b = document.getElementById('sun_b');
-            sun_b.textContent = menuSunday.breakfast;
+        sun_b.textContent = menuSunday.breakfast;
         const sun_l = document.getElementById('sun_l');
-            sun_l.textContent = menuSunday.lunch;
+        sun_l.textContent = menuSunday.lunch;
         const sun_ev = document.getElementById('sun_ev');
-            sun_ev.textContent = menuSunday.eveningsnacks;
+        sun_ev.textContent = menuSunday.eveningsnacks;
         const sun_d = document.getElementById('sun_d');
-            sun_d.textContent = menuSunday.dinner;
+        sun_d.textContent = menuSunday.dinner;
     } else {
         console.log("User document not found");
     }
@@ -218,30 +227,30 @@ getDoc(mess_timings).then((snapshot) => {
         const messTimings = snapshot.data();
 
         const time_b = document.getElementById('time_b');
-            time_b.textContent = `Timings: ${messTimings.breakfast}`;
+        time_b.textContent = `Timings: ${messTimings.breakfast}`;
 
         const time_b_h = document.getElementById('time_b_h');
-            time_b_h.textContent = `Holiday Timings: ${messTimings.breakfast_h}`;
+        time_b_h.textContent = `Holiday Timings: ${messTimings.breakfast_h}`;
 
         const time_l = document.getElementById('time_l');
-            time_l.textContent = `Timings: ${messTimings.lunch}`;
+        time_l.textContent = `Timings: ${messTimings.lunch}`;
 
         const time_l_h = document.getElementById('time_l_h');
-            time_l_h.textContent = `Holiday Timings: ${messTimings.lunch_h}`;
+        time_l_h.textContent = `Holiday Timings: ${messTimings.lunch_h}`;
 
         const time_ev = document.getElementById('time_ev');
-            time_ev.textContent = `Timings: ${messTimings.eveningsnacks}`;
+        time_ev.textContent = `Timings: ${messTimings.eveningsnacks}`;
 
         const time_ev_h = document.getElementById('time_ev_h');
-            time_ev_h.textContent = `Holiday Timings: ${messTimings.eveningsnacks_h}`;
+        time_ev_h.textContent = `Holiday Timings: ${messTimings.eveningsnacks_h}`;
 
         const time_d = document.getElementById('time_d');
-            time_d.textContent = `Timings: ${messTimings.dinner}`;
+        time_d.textContent = `Timings: ${messTimings.dinner}`;
 
         const time_d_h = document.getElementById('time_d_h');
-            time_d_h.textContent = `Holiday Timings: ${messTimings.dinner_h}`;
+        time_d_h.textContent = `Holiday Timings: ${messTimings.dinner_h}`;
 
-        
+
     } else {
         console.log("User document not found");
     }
@@ -255,29 +264,126 @@ getDoc(mess_timings).then((snapshot) => {
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
-      const uid = user.uid;
-      const userRef = doc(db, 'users', uid)
+        const uid = user.uid;
+        const userRef = doc(db, 'users', uid)
 
-    getDoc(userRef).then((snapshot) => {
-        if (snapshot.exists()) {
-            const userData = snapshot.data();
-            const userName = userData.name; // Access the "name" field
-            const userSID = userData.SID; // Access the "sid" field
-            // Do something with the user's information
-            const userNameLink = document.getElementById('userNameLink');
+        getDoc(userRef).then((snapshot) => {
+            if (snapshot.exists()) {
+                const userData = snapshot.data();
+                const userName = userData.name; // Access the "name" field
+                const userSID = userData.SID; // Access the "sid" field
+                // Do something with the user's information
+                const userNameLink = document.getElementById('userNameLink');
                 userNameLink.textContent = `Name - ${userName}`;
                 const userSIDLink = document.getElementById('userSIDLink');
                 userSIDLink.textContent = `SID - ${userSID}`;
-        } else {
-            console.log("User document not found");
-        }
-    }).catch((error) => {
-        console.log("Error getting user document:", error);
-    });
+            } else {
+                console.log("User document not found");
+            }
+        }).catch((error) => {
+            console.log("Error getting user document:", error);
+        });
     } else {
         console.log('Noooo users')
     }
-  });
+});
+
+
+
+onAuthStateChanged(auth, async (user) => {
+    if (user) {
+        const uid = user.uid;
+        const form = document.querySelector('#booking'); // Use # to select by id
+        const submitButton = form.querySelector('button[type="submit"]');
+
+        // Retrieve the timestamp from Firestore
+        const userDocRef = doc(db, 'users', uid);
+        const userDocSnapshot = await getDoc(userDocRef);
+        const lastSubmissionTimestamp = userDocSnapshot.get('lastSubmissionTimestamp');
+
+        if (lastSubmissionTimestamp) {
+            const now = Timestamp.now();
+            const isSameDay = Timestamp.fromMillis(lastSubmissionTimestamp.toMillis()).toDate().toDateString() === now.toDate().toDateString();
+
+            if (isSameDay) {
+                submitButton.disabled = true;
+            }
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault(); // Prevent default form submission
+
+            // Calculate the number of checkboxes checked
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            let checkedCount = 0;
+            checkboxes.forEach((checkbox) => {
+                if (checkbox.checked) {
+                    checkedCount++;
+                }
+            });
+
+            // Update the "fees" field and set the lastSubmissionTimestamp
+            const feesRef = doc(db, 'users', uid); // Replace with your actual collection and document ID
+            await updateDoc(feesRef, {
+                fees: increment(checkedCount),
+                lastSubmissionTimestamp: Timestamp.now()
+            });
+
+            submitButton.disabled = true; // Disable the submit button after submission
+            alert(`${checkedCount} meals booked for tomorrow`);
+
+            const userRef = doc(db, 'users', uid)
+            getDoc(userRef).then(async (snapshot) => {
+                if (snapshot.exists()) {
+                    const userData = snapshot.data();
+                    const userEmail = userData.email; // Access the "fees" field
+                    // Do something with the user's information
+                    const currentDate = new Date();
+                    const tomorrowDate = new Date(currentDate);
+                    tomorrowDate.setDate(currentDate.getDate() + 1);
+                    const docRef = await addDoc(collection(db, 'email'), {
+                        to: [userEmail],
+                        message: {
+                            subject: `Your meals on ${tomorrowDate}`,
+                            html: `You have booked ${checkedCount} meals for ${tomorrowDate}. You need to show this mail in order to get the meal.`
+                        }
+                    });
+
+                } else {
+                    console.log("User document not found");
+                }
+            }).catch((error) => {
+                console.log("Error getting user document:", error);
+            });
+        });
+    }
+});
+
+
+
+
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        const uid = user.uid;
+        const userRef = doc(db, 'users', uid)
+
+        getDoc(userRef).then((snapshot) => {
+            if (snapshot.exists()) {
+                const userData = snapshot.data();
+                const userFees = userData.fees; // Access the "fees" field
+                // Do something with the user's information
+                const userNameLink = document.getElementById('totalFees');
+                userNameLink.textContent = userFees * 60;
+            } else {
+                console.log("User document not found");
+            }
+        }).catch((error) => {
+            console.log("Error getting user document:", error);
+        });
+    } else {
+        console.log('Noooo users')
+    }
+});
 
 
 
