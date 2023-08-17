@@ -1,0 +1,18 @@
+body{
+    background: linear-gradient(to right, #f3dfdf, #f5c3c3);
+}
+.spinner-border,.spinner-grow{
+    color:rgb(202, 92, 105);
+    width:60px;
+    height:60px;
+}
+.top,.bottom{
+    display: flex;
+    justify-content: center;
+}
+.bottom{
+    margin-top: 6vh;
+}
+.top{
+    margin-top: 40vh;
+}
