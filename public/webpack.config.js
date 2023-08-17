@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
     mode: 'development',
     entry: {
-        bundle1: './BackEnd/index.js',
+        bundle: './BackEnd/index.js',
         // bundle2: './BackEnd/index2.js',
       },
     output: {
@@ -40,16 +40,4 @@ module.exports = {
     watch: true
 }
 
-module.exports = {
-    mode: 'development',
-    entry: {
-        // bundle1: './BackEnd/index.js',
-        bundle4: './BackEnd/index4.js',
-      },
-    output: {
-        path: path.resolve(__dirname, 'FrontEnd'),
-        // filename: 'bundle.js',
-        filename: 'bundle4.js'
-    },
-    watch: true
-}
+
