@@ -1,3 +1,25 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6c5252;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7b6060;
+}
 body{
     background-color: #f7d1c7;
 }
@@ -33,9 +55,11 @@ ul {
 .fdhead{
   color:#fa4949;
   text-shadow: 1px 1px  #590f2d;
+  margin-left: 20px;
 }
 .topimg{
   position: fixed;
+  margin-right:40px;
 }
 .sidemenu{
   position: static;
@@ -103,6 +127,7 @@ hr{
 }
 .rbpl{
   padding-bottom: 30px;
+  margin-left: 100px;
 }
 .hdcont{
   font-size: 20px;
@@ -169,6 +194,12 @@ hr{
     justify-content: flex-end !important;
   }
 }
+@media (max-width: 520px) {
+  .navbar{
+    width:510px;
+  }
+}
+
 .nav-item{
   font-size: 20px;
 }
@@ -217,4 +248,33 @@ h2{
 }
 .food-img, .food-pricel{
   padding-bottom: 40px;
+}
+.btn{
+  margin-left: 35px;
+}
+@media (max-width: 640px) {
+  .remove-section {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .topimg {
+    display: none !important;
+    
+  }
+}
+@media (min-width: 640px) {
+  .smhead{
+    display: none;
+    
+  }
+  .navbar{
+    width:1000px;
+  }
+}
+@media ((min-width:950px)) {
+
+  .navbar{
+    width:1090px;
+  }
 }
