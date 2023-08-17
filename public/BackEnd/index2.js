@@ -1,11 +1,8 @@
 import { initializeApp } from 'firebase/app'
 import {
-    getFirestore, collection, getDocs,
-    addDoc, deleteDoc, doc,
-    onSnapshot,
-    query, where,
-    orderBy, serverTimestamp,
-    getDoc, setDoc, updateDoc, increment, Timestamp
+    getFirestore, collection,
+    addDoc, doc,
+    getDoc, updateDoc, increment, Timestamp
 } from 'firebase/firestore'
 import {
     getAuth,
@@ -313,12 +310,22 @@ onAuthStateChanged(auth, async (user) => {
         form.addEventListener('submit', async (e) => {
             e.preventDefault(); // Prevent default form submission
 
+            const mealMap = {
+                'option1': 'Breakfast',
+                'option2': 'Lunch',
+                'option3': 'Evening Snacks',
+                'option4': 'Dinner'
+            };
+
             // Calculate the number of checkboxes checked
             const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const checkedMeals = [];
             let checkedCount = 0;
             checkboxes.forEach((checkbox) => {
                 if (checkbox.checked) {
                     checkedCount++;
+                    const mealName = mealMap[checkbox.value];
+                    checkedMeals.push(mealName);
                 }
             });
 
@@ -341,11 +348,33 @@ onAuthStateChanged(auth, async (user) => {
                     const currentDate = new Date();
                     const tomorrowDate = new Date(currentDate);
                     tomorrowDate.setDate(currentDate.getDate() + 1);
+                    const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
+                    const formattedTomorrowDate = tomorrowDate.toLocaleString('en-US', options);
                     const docRef = await addDoc(collection(db, 'email'), {
                         to: [userEmail],
                         message: {
-                            subject: `Your meals on ${tomorrowDate}`,
-                            html: `You have booked ${checkedCount} meals for ${tomorrowDate}. You need to show this mail in order to get the meal.`
+                            subject: `Your meals on ${formattedTomorrowDate}`,
+                            html: `
+                            <html lang="en">
+                            <head>
+                                <meta charset="UTF-8">
+                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                <title>Meal Booking Ticket</title>
+                            </head>
+                            <body>
+                                <div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px; width: 300px; margin: 0 auto; text-align: center; font-family: Arial, sans-serif; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                                    <div style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Meal Booking Confirmation</div>
+                                    <div style="font-size: 14px;">
+                                        You have booked:<br>
+                                        <strong>${checkedMeals.join(', ')}</strong><br>
+                                        for<br>
+                                        <strong>${formattedTomorrowDate}</strong><br><br>
+                                        Please present this ticket to collect your meals.
+                                    </div>
+                                </div>
+                            </body>
+                            </html>
+                        `
                         }
                     });
 
