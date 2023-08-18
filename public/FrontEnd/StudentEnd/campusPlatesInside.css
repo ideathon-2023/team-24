@@ -272,9 +272,9 @@ h2{
     width:1000px;
   }
 }
-@media ((min-width:800px)) {
+@media ((min-width:950px)) {
 
   .navbar{
-    width:1090px;
+    width:1370px;
   }
 }
