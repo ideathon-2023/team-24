@@ -30,12 +30,12 @@
   <nav class="bg-red-200 dark:bg-red-200 shadow-md">
       <div class="max-w-screen-xl px-4 py-3 mx-auto">
           <div class="flex items-center">
-              <ul class="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
+              <ul class="flex flex-row font-medium mt-0 mr-6 space-x-8 text-md">
                   <li>
-                      <a href="#" class="text-red-500 dark:text-red-500 hover:text-base hover:text-red-600 home" aria-current="page">Home</a>
+                      <a href="#" class="text-red-500 dark:text-red-500 hover:text-lg hover:text-red-600 home" aria-current="page">Home</a>
                   </li>
                   <li>
-                      <a href="#more" class="text-red-500 dark:text-red-500 hover:text-base hover:text-red-600">More</a>
+                      <a href="#more" class="text-red-500 dark:text-red-500 hover:text-lg hover:text-red-600">More</a>
                   </li>
               </ul>
           </div>
@@ -62,19 +62,6 @@
           <div
             class="flex flex-row items-center justify-center lg:justify-start">
             <p class="mb-0 mr-4 text-red-600" id="signin">Sign in with</p>
-            <!-- Facebook -->
-           
-            
-            <!-- The JS SDK Login Button -->
-            
-            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-            </fb:login-button>
-            
-            <div id="status">
-            </div>
-            
-            <!-- Load the JS SDK asynchronously -->
-            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 
             <!-- Twitter -->
             <button
@@ -167,13 +154,13 @@
           <div class="text-center lg:text-left">
             <button
               type="submit"
-              class="inline-block rounded bg-[#f9aeae] px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-[#ff9999] hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-[#fd7777] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] my-14 login"
+              class="inline-block rounded bg-[#f9aeae] px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-[#ff9999] hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-[#fd7777] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] my-8 login"
               data-te-ripple-init
               data-te-ripple-color="light">
               Login
             </button>
-            <!--Forgot password link-->
-        <a href="#!" class="mx-5">Forgot password?</a>
+            <!-- Forgot password link
+        <a href="#!" class="mx-5">Forgot password?</a> -->
             <!-- Register link -->
             <p class="mb-0 mt-2 pt-1 text-red-600 font-semibold">
               Don't have an account?
@@ -280,47 +267,37 @@
 </section>
 <hr class="h-px bg-red-100 border-0 dark:bg-red-100 mx-8">
       <footer class="bg-red-200 hover:text-white shadow-[0_4px_9px_-4px_#3b71ca] text-gray-600 body-font rounded-lg shadow m-4 dark:bg-red-200">
-        <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+        <div class="px-14 py-14 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
             <a class="flex title-font font-medium items-center md:justify-start justify-center text-red-500">
               <i class="fa-solid fa-plate-wheat fa-2xl" style="color: #f54748;"></i>
-              <span class="ml-3 text-xl">Campus Plates</span>
+              <span class="ml-3 text-3xl fhead">Campus Plates</span>
             </a>
-            <p class="mt-2 text-sm text-gray-500">Where Freshness Meets Convenience - Your One-Stop Grocery Destination!</p>
+            <p class="mt-2 text-md text-gray-600">Where Freshness Meets Convenience - Your One-Stop Grocery Destination!</p>
           </div>
           <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
             <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">COMPANY</h2>
-              <nav class="list-none mb-10">
+              <h2 class="title-font font-medium text-gray-900 tracking-widest text-md mb-3">COMPANY</h2>
+              <nav class="list-none mb-10 text-md">
                 <li>
-                  <a class="text-gray-600 hover:text-gray-800" href="../HomePageconnectedParts/team.html">About Us</a>
+                  <a class="text-gray-700 hover:text-gray-900 text-md" href="../HomePageconnectedParts/team.html">About Us</a>
                 </li>
                 <li>
-                  <a class="text-gray-600 hover:text-gray-800" href="../HomePageconnectedParts/team.html">Team</a>
+                  <a class="text-gray-700 hover:text-gray-900 text-md" href="../HomePageconnectedParts/team.html">Team</a>
                 </li>
                 <li>
-                  <!-- <a class="text-gray-600 hover:text-gray-800">Flour</a>
-                </li>
-                <li>
-                  <a class="text-gray-600 hover:text-gray-800">Cereal</a>
-                </li> -->
+
               </nav>
             </div>
             <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CONTACT US</h2>
+              <h2 class="title-font font-medium text-gray-900 tracking-widest text-md mb-3">CONTACT US</h2>
               <nav class="list-none mb-10">
                 <li>
-                  <a class="text-gray-600 hover:text-gray-800" href="../StudentEnd/CampusPlatesContact.html">Help & Support</a>
+                  <a class="text-gray-700 hover:text-gray-900" href="../StudentEnd/CampusPlatesContact.html">Help & Support</a>
                 </li>
                 <li>
-                  <a class="text-gray-600 hover:text-gray-800 "href="../StudentEnd/CampusPlatesContact.html" >Report</a>
+                  <a class="text-gray-700 hover:text-gray-900 "href="../StudentEnd/CampusPlatesContact.html" >Report</a>
                 </li>
-                <!-- <li>
-                  <a class="text-gray-600 hover:text-gray-800">Baby Shampoo</a>
-                </li>
-                <li>
-                  <a class="text-gray-600 hover:text-gray-800">Diapers (Various Sizes)</a>
-                </li> -->
               </nav>
             </div>
           </div>
