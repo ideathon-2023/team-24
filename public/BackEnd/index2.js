@@ -93,7 +93,7 @@ getDoc(menu_monday).then((snapshot) => {
         const mon_d = document.getElementById('mon_d');
         mon_d.textContent = menuMonday.dinner;
     } else {
-        console.log("User document not found");
+        alert("User document not found");
     }
 }).catch((error) => {
     console.log("Error getting user document:", error);
@@ -269,11 +269,14 @@ onAuthStateChanged(auth, (user) => {
                 const userData = snapshot.data();
                 const userName = userData.name; // Access the "name" field
                 const userSID = userData.SID; // Access the "sid" field
+                const userEmail = userData.email; // Access the "sid" field
                 // Do something with the user's information
                 const userNameLink = document.getElementById('userNameLink');
                 userNameLink.textContent = `Name - ${userName}`;
-                const userSIDLink = document.getElementById('userSIDLink');
-                userSIDLink.textContent = `SID - ${userSID}`;
+                // const userSIDLink = document.getElementById('userSIDLink');
+                // userSIDLink.textContent = `SID - ${userSID}`;
+                const userEmailLink = document.getElementById('userEmailLink');
+                userEmailLink.textContent = `Email - ${userEmail}`;
             } else {
                 console.log("User document not found");
             }
@@ -432,7 +435,7 @@ logoutLink.addEventListener('click', (e) => {
             window.location.href = '/FrontEnd/HomePage/index.html';
         })
         .catch((error) => {
-            console.log('Logout error:', error.message);
+            alert(`Logout error: ${error.message}`);
         });
 });
 

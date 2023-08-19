@@ -1,11 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import {
-    getFirestore, collection, getDocs,
-    addDoc, deleteDoc, doc,
-    onSnapshot,
-    query, where,
-    orderBy, serverTimestamp,
-    getDoc, setDoc
+    getFirestore, doc, setDoc
 } from 'firebase/firestore'
 import {
     getAuth,
@@ -44,7 +39,7 @@ signupForm.addEventListener('submit', (e) => {
     const confirmPassword = signupForm.confirmPassword.value;
 
     if (password !== confirmPassword) {
-        console.log('Passwords do not match. Please try again.');
+        alert('Passwords do not match. Please try again.');
         return;
     }
 
@@ -68,14 +63,14 @@ signupForm.addEventListener('submit', (e) => {
                     window.location.href = '/FrontEnd/StudentEnd/campusPlatesInside.html';
                 })
                 .catch((error) => {
-                    console.log('Error storing user information:', error.message);
+                    alert(`Error storing user information: ${error.message}`);
                 });
 
 
 
         })
         .catch((err) => {
-            console.log(err.message)
+            alert(err.message)
         })
 })
 
