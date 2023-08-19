@@ -1,15 +1,13 @@
 import { initializeApp } from 'firebase/app'
 import {
-    getFirestore, collection, getDocs,
-    addDoc, deleteDoc, doc,
-    onSnapshot,
-    query, where,
-    orderBy, serverTimestamp,
+    getFirestore, doc,
     getDoc, setDoc
 } from 'firebase/firestore'
 import {
     getAuth,
-    signInWithEmailAndPassword
+    signInWithEmailAndPassword,
+    GoogleAuthProvider,
+    signInWithPopup
 } from 'firebase/auth'
 
 
@@ -46,6 +44,54 @@ loginForm.addEventListener('submit', (e) => {
             window.location.href = '/FrontEnd/StudentEnd/campusPlatesInside.html';
         })
         .catch((err) => {
-            console.log(err.message)
+            alert(err.message)
         })
 })
+
+
+
+const google = document.querySelector('.googleLogin');
+google.addEventListener('click', async (e) => {
+    e.preventDefault();
+
+    const googleProvider = new GoogleAuthProvider();
+
+    try {
+        const result = await signInWithPopup(auth, googleProvider);
+        const user = result.user;
+        const userId = user.uid;
+
+        const userRef = doc(db, 'users', userId);
+
+        getDoc(userRef).then(async (snapshot) => {
+            if (snapshot.exists()) {
+                window.location.href = '/FrontEnd/StudentEnd/campusPlatesInside.html';
+            } else {
+                await setDoc(userRef, {
+                    name: user.displayName,
+                    email: user.email
+                });
+                console.log('User information stored successfully!');
+                window.location.href = '/FrontEnd/StudentEnd/campusPlatesInside.html';
+            }
+        }).catch((error) => {
+            alert(`Error getting user document: ${error}`);
+        });
+
+        // const docSnapshot = await getDoc(userRef);
+        // if (!docSnapshot.exists()) {
+        //     // Document doesn't exist, set user information
+        //     await setDoc(userRef, {
+        //         name: user.displayName,
+        //         email: user.email
+        //     });
+        //     console.log('User information stored successfully!');
+        // }
+
+        // Redirect after processing
+        // window.location.href = '/FrontEnd/StudentEnd/campusPlatesInside.html';
+    } catch (error) {
+        const errorMessage = error.message;
+        alert(`Login error: ${errorMessage}`);
+    }
+});
